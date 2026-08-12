@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>プライバシーポリシー — 家計簿</title>
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #d9f0ea 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #fde7d6 0%, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.5rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1.25rem 0 0.5rem;
+    }
+    p, li { font-size: 0.95rem; }
+    ul { padding-left: 1.25rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 0.75rem 0 1rem;
+      background: rgba(255,255,255,0.55);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: rgba(15, 118, 110, 0.08); }
+    .note {
+      margin-top: 2.5rem;
+      padding: 1rem 1.1rem;
+      border-left: 3px solid var(--accent);
+      background: rgba(255,255,255,0.65);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">
+      最終更新日: 2026年8月12日<br />
+      対象アプリ: 家計簿（iOS）<br />
+      運営: 個人開発者（App Store の販売元表記に従います）
+    </p>
+
+    <p>本ポリシーは、上記アプリ（以下「本アプリ」）における利用者情報の取扱いを定めるものです。</p>
+
+    <h2>1. 収集する情報</h2>
+
+    <h3>1.1 端末内のみで扱う情報</h3>
+    <p>本アプリは、原則として家計データを端末内に保存します（取引、カテゴリ、予算、定期支出、ボーナス決裁、資産記録など）。サインインおよびクラウド同期を行わない限り、開発者のサーバーへ送信されません。</p>
+
+    <h3>1.2 アカウント情報（サインイン時）</h3>
+    <p>「Sign in with Apple」および認証基盤（Supabase Auth）を通じて、Apple が提供する識別子や、利用者が共有を選択した場合の氏名・メールアドレス等、認証セッションを処理します。メールの非公開リレーを選択した場合、実際のメールアドレスは開発者に開示されないことがあります。</p>
+
+    <h3>1.3 クラウド同期データ</h3>
+    <p>サインイン後に同期機能を利用する場合、家計データを開発者が管理するクラウドデータベース（Supabase）へ保存・更新します。データは利用者アカウント単位で隔離されます。</p>
+
+    <h3>1.4 AI 診断に送信する情報</h3>
+    <p>AI 家計診断を実行した場合、月次の合計金額・上位カテゴリ・比較指標・ルール診断結果などの<strong>要約情報</strong>を、開発者のサーバー経由で外部の生成 AI（Anthropic Claude）へ送信します。<strong>取引明細の全文やメモ全文は送信しません。</strong> AI 診断は利用者が明示的に実行したときのみ行われます。</p>
+
+    <h3>1.5 購入情報</h3>
+    <p>プレミアム機能の購入・復元は Apple の App Store / StoreKit を通じて処理されます。支払いカード情報は開発者は取得しません。</p>
+
+    <h3>1.6 バックアップファイル</h3>
+    <p>手動バックアップの保存先（例: iCloud Drive）は利用者が選択します。当該ファイルの管理は、選択した保存サービスの規約に従います。</p>
+
+    <h3>1.7 取得しないもの</h3>
+    <p>広告識別子（IDFA）を用いたトラッキング、第三者広告 SDK、行動分析のための独自トラッキング SDK は利用しません。</p>
+
+    <h2>2. 利用目的</h2>
+    <ul>
+      <li>家計記録・分析・レポート等の機能提供</li>
+      <li>複数端末間でのデータ同期</li>
+      <li>サインイン状態の維持と不正利用防止</li>
+      <li>AI 診断コメントの生成</li>
+      <li>プレミアム機能の提供・購入状態の確認</li>
+      <li>不具合対応、セキュリティ確保、法令遵守</li>
+    </ul>
+
+    <h2>3. 第三者提供・委託</h2>
+    <p>開発者は、法令に基づく場合を除き、利用者の同意なく個人データを第三者に販売しません。機能提供のため、次の事業者に処理を委託または提供することがあります。</p>
+    <table>
+      <thead>
+        <tr><th>事業者</th><th>役割</th><th>主なデータ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Apple</td><td>Sign in with Apple、課金</td><td>認証・購入関連</td></tr>
+        <tr><td>Supabase</td><td>認証、DB、Edge Functions</td><td>アカウント、同期データ、AI 中継</td></tr>
+        <tr><td>Anthropic</td><td>AI 文章生成</td><td>要約情報のみ</td></tr>
+      </tbody>
+    </table>
+    <p>サーバー所在地は国外となる場合があります。</p>
+
+    <h2>4. 保管期間</h2>
+    <ul>
+      <li>端末内データ: アンインストールまたは利用者が削除するまで</li>
+      <li>クラウドデータ: アカウントが有効で、利用者が削除するまで（またはサービス終了時に合理的期間内に削除）</li>
+      <li>AI リクエスト: 処理および不正利用防止に必要な範囲で一時的に処理</li>
+    </ul>
+
+    <h2>5. 安全管理</h2>
+    <p>通信の暗号化、利用者単位のアクセス制御、AI API キーのサーバー側管理などを行います。端末紛失や、利用者が共有したバックアップファイルの流出など、開発者の管理外のリスクまで保証するものではありません。</p>
+
+    <h2>6. 利用者の選択</h2>
+    <ul>
+      <li>サインインせず端末内のみで利用可能（同期・サーバー経由 AI は不可）</li>
+      <li>AI 診断は手動実行。実行しなければ外部 AI に送られない</li>
+      <li>アカウント削除やクラウドデータの削除希望は、お問い合わせください</li>
+    </ul>
+
+    <h2>7. 子どもの利用</h2>
+    <p>本アプリは、子どもから積極的に個人情報を収集することを目的としていません。</p>
+
+    <h2>8. 開示・訂正・削除等</h2>
+    <p>適用法令に基づく開示・訂正・削除等の請求は、下記お問い合わせ先までご連絡ください。ご本人確認のうえ、法令の範囲で対応します。</p>
+
+    <h2>9. 本ポリシーの変更</h2>
+    <p>重要な変更は、本アプリ内または本ページでの掲示等、合理的な方法でお知らせします。</p>
+
+    <h2>10. お問い合わせ</h2>
+    <p>
+      プライバシーに関するお問い合わせ:<br />
+      <a href="mailto:sw.biz.hira@gmail.com"><strong>sw.biz.hira@gmail.com</strong></a><br />
+      または App Store のアプリページに記載の開発者連絡手段
+    </p>
+
+    <p class="note">
+      この HTML は App Store Connect 用の公開 URL としてホストしてください（GitHub Pages 等）。
+    </p>
+  </main>
+</body>
+</html>
